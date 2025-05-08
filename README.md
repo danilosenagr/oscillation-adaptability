@@ -1,4 +1,10 @@
-# Necessary Oscillations: Adaptability Dynamics Under Conservation Constraints
+<div align="center">
+  <img src="https://raw.githubusercontent.com/bbarclay/oscillation-adaptability/main/paper/figures/adaptability_landscapes_combined.png" alt="Adaptability Landscapes" width="100%"/>
+  <h1>NECESSARY OSCILLATIONS</h1>
+  <h3>Adaptability Dynamics Under Conservation Constraints in Structured Systems</h3>
+  <p><em>C(x,d) + A(x,d) = 1</em></p>
+  <p>A Mathematical Framework for Understanding Oscillatory Phenomena in Complex Systems</p>
+</div>
 
 > [**Read the full paper (PDF)**](https://github.com/bbarclay/oscillation-adaptability/raw/main/downloads/oscillation_adaptability.pdf) | [**Visit the project website**](https://bbarclay.github.io/oscillation-adaptability/) | [**View on GitHub**](https://github.com/bbarclay/oscillation-adaptability)
 
@@ -12,10 +18,6 @@
 [![Citations](https://img.shields.io/badge/Citations-42-orange)](https://scholar.google.com)
 [![Conference](https://img.shields.io/badge/ICCS-2024-informational)](https://iccs-meeting.org)
 [![PDF](https://img.shields.io/badge/PDF-Download-red.svg)](https://github.com/bbarclay/oscillation-adaptability/raw/main/downloads/oscillation_adaptability.pdf)
-
-<p align="center">
-  <img src="paper/figures/adaptability_landscapes_combined.png" alt="Adaptability Landscapes" width="800"/>
-</p>
 
 ## Introduction
 
