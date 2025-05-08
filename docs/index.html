@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Necessary Oscillations: Adaptability Dynamics Under Conservation Constraints</title>
-    <meta name="description" content="A theoretical framework demonstrating that oscillatory behavior can be a necessary consequence of a system optimizing towards order while adhering to conservation constraints.">
-    <meta name="keywords" content="oscillations, adaptability, coherence, conservation law, complex systems, mathematical modeling">
+    <meta name="description"
+        content="A theoretical framework demonstrating that oscillatory behavior can be a necessary consequence of a system optimizing towards order while adhering to conservation constraints.">
+    <meta name="keywords"
+        content="oscillations, adaptability, coherence, conservation law, complex systems, mathematical modeling">
     <meta name="author" content="Brandon Barclay">
-    
+
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Necessary Oscillations: Adaptability Dynamics Under Conservation Constraints">
-    <meta property="og:description" content="A theoretical framework demonstrating that oscillatory behavior can be a necessary consequence of a system optimizing towards order while adhering to conservation constraints.">
-    <meta property="og:image" content="https://yourusername.github.io/oscillation-adaptability/images/adaptability_landscapes_combined.png">
-    <meta property="og:url" content="https://yourusername.github.io/oscillation-adaptability/">
+    <meta property="og:description"
+        content="A theoretical framework demonstrating that oscillatory behavior can be a necessary consequence of a system optimizing towards order while adhering to conservation constraints.">
+    <meta property="og:image"
+        content="https://bbarclay.github.io/oscillation-adaptability/images/adaptability_landscapes_combined.png">
+    <meta property="og:url" content="https://bbarclay.github.io/oscillation-adaptability/">
     <meta property="og:type" content="website">
-    
+
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Necessary Oscillations: Adaptability Dynamics Under Conservation Constraints">
-    <meta name="twitter:description" content="A theoretical framework demonstrating that oscillatory behavior can be a necessary consequence of a system optimizing towards order while adhering to conservation constraints.">
-    <meta name="twitter:image" content="https://yourusername.github.io/oscillation-adaptability/images/adaptability_landscapes_combined.png">
-    
+    <meta name="twitter:description"
+        content="A theoretical framework demonstrating that oscillatory behavior can be a necessary consequence of a system optimizing towards order while adhering to conservation constraints.">
+    <meta name="twitter:image"
+        content="https://bbarclay.github.io/oscillation-adaptability/images/adaptability_landscapes_combined.png">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Custom CSS -->
     <style>
         :root {
@@ -36,121 +43,123 @@
             --light-color: #ecf0f1;
             --dark-color: #2c3e50;
         }
-        
+
         body {
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             color: var(--dark-color);
             background-color: var(--light-color);
         }
-        
+
         .hero {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             padding: 4rem 0;
             margin-bottom: 2rem;
         }
-        
+
         .section {
             padding: 3rem 0;
         }
-        
+
         .card {
             transition: transform 0.3s ease;
             margin-bottom: 1.5rem;
             border: none;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
+
         .card:hover {
             transform: translateY(-5px);
         }
-        
+
         .card-header {
             background-color: var(--primary-color);
             color: white;
         }
-        
+
         .btn-primary {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
         }
-        
+
         .btn-primary:hover {
             background-color: var(--secondary-color);
             border-color: var(--secondary-color);
         }
-        
+
         .figure {
             text-align: center;
             margin: 2rem 0;
         }
-        
+
         .figure img {
             max-width: 100%;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 4px;
         }
-        
+
         .figure-caption {
             margin-top: 1rem;
             font-style: italic;
         }
-        
+
         .equation {
             text-align: center;
             margin: 2rem 0;
             font-family: 'Cambria Math', 'Times New Roman', serif;
             font-size: 1.2rem;
         }
-        
+
         footer {
             background-color: var(--secondary-color);
             color: white;
             padding: 2rem 0;
             margin-top: 3rem;
         }
-        
+
         .social-links a {
             color: white;
             margin-right: 1rem;
             font-size: 1.5rem;
         }
-        
+
         .nav-pills .nav-link.active {
             background-color: var(--primary-color);
         }
-        
+
         .nav-pills .nav-link {
             color: var(--dark-color);
         }
-        
+
         #mermaid-diagram {
             width: 100%;
             max-width: 800px;
             margin: 0 auto;
         }
     </style>
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+
     <!-- MathJax for equations -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
+
     <!-- Mermaid for diagrams -->
     <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">Oscillation Adaptability</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -171,7 +180,7 @@
                         <a class="nav-link" href="#resources">Resources</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/yourusername/oscillation-adaptability" target="_blank">
+                        <a class="nav-link" href="https://github.com/bbarclay/oscillation-adaptability" target="_blank">
                             <i class="fab fa-github"></i> GitHub
                         </a>
                     </li>
@@ -189,7 +198,8 @@
                 <a href="https://arxiv.org" class="btn btn-light me-2" target="_blank">
                     <i class="fas fa-file-pdf"></i> Read the Paper
                 </a>
-                <a href="https://github.com/yourusername/oscillation-adaptability" class="btn btn-outline-light" target="_blank">
+                <a href="https://github.com/bbarclay/oscillation-adaptability" class="btn btn-outline-light"
+                    target="_blank">
                     <i class="fab fa-github"></i> View on GitHub
                 </a>
             </div>
@@ -203,22 +213,34 @@
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <p class="lead">
-                        We present a theoretical framework and a paradigmatic mathematical model demonstrating that oscillatory behavior can be a necessary consequence of a system optimizing towards a state of order (or coherence) while adhering to a fundamental conservation law that links this order to its residual adaptability (or exploratory capacity).
+                        We present a theoretical framework and a paradigmatic mathematical model demonstrating that
+                        oscillatory behavior can be a necessary consequence of a system optimizing towards a state of
+                        order (or coherence) while adhering to a fundamental conservation law that links this order to
+                        its residual adaptability (or exploratory capacity).
                     </p>
-                    
+
                     <div class="figure">
-                        <img src="images/adaptability_landscapes_combined.png" alt="Adaptability Landscapes" class="img-fluid">
+                        <img src="images/adaptability_landscapes_combined.png" alt="Adaptability Landscapes"
+                            class="img-fluid">
                         <div class="figure-caption">
-                            Adaptability landscapes A(x,d) for three different orbital order sets. Left: Harmonic N_ord={1,2,3}. Middle: Odd Harmonic N_ord={1,3,5}. Right: Mixed N_ord={2,3,5}. Color represents adaptability value, with warmer colors indicating higher adaptability.
+                            Adaptability landscapes A(x,d) for three different orbital order sets. Left: Harmonic
+                            N_ord={1,2,3}. Middle: Odd Harmonic N_ord={1,3,5}. Right: Mixed N_ord={2,3,5}. Color
+                            represents adaptability value, with warmer colors indicating higher adaptability.
                         </div>
                     </div>
-                    
+
                     <p>
-                        Within our model, we rigorously prove an exact conservation law between coherence (C) and adaptability (A), with C+A=1, which is validated numerically with precision on the order of 10^-16. We demonstrate that as the system evolves towards maximal coherence under a depth parameter (d), its adaptability A decays exponentially according to a precise mathematical relationship.
+                        Within our model, we rigorously prove an exact conservation law between coherence (C) and
+                        adaptability (A), with C+A=1, which is validated numerically with precision on the order of
+                        10^-16. We demonstrate that as the system evolves towards maximal coherence under a depth
+                        parameter (d), its adaptability A decays exponentially according to a precise mathematical
+                        relationship.
                     </p>
-                    
+
                     <p>
-                        Crucially, when introducing explicit time-dependence representing intrinsic dynamics with characteristic frequencies, we prove that oscillations in A (and consequently in C) are mathematically necessary to maintain the conservation principle.
+                        Crucially, when introducing explicit time-dependence representing intrinsic dynamics with
+                        characteristic frequencies, we prove that oscillations in A (and consequently in C) are
+                        mathematically necessary to maintain the conservation principle.
                     </p>
                 </div>
             </div>
@@ -236,7 +258,8 @@
                             <h5 class="card-title mb-0">Exact Conservation Law</h5>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">We prove and numerically validate that C+A=1 with extraordinary precision (10^-16).</p>
+                            <p class="card-text">We prove and numerically validate that C+A=1 with extraordinary
+                                precision (10^-16).</p>
                             <div class="equation">
                                 \[ C(x,d) + A(x,d) = 1 \]
                             </div>
@@ -249,7 +272,8 @@
                             <h5 class="card-title mb-0">Exponential Decay</h5>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Adaptability decays exponentially with depth, following a precise mathematical relationship.</p>
+                            <p class="card-text">Adaptability decays exponentially with depth, following a precise
+                                mathematical relationship.</p>
                             <div class="equation">
                                 \[ A(x,d) \leq \frac{|N_{\text{ord}}^*(x)|}{|N_{\text{ord}}|} e^{-d M^*(x)} \]
                             </div>
@@ -262,7 +286,8 @@
                             <h5 class="card-title mb-0">Necessary Oscillations</h5>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Time-dependent dynamics mathematically necessitate oscillations to maintain conservation.</p>
+                            <p class="card-text">Time-dependent dynamics mathematically necessitate oscillations to
+                                maintain conservation.</p>
                             <div class="figure">
                                 <img src="images/time_series.png" alt="Time Series" class="img-fluid">
                             </div>
@@ -277,9 +302,11 @@
                             <h5 class="card-title mb-0">Modal Fingerprints</h5>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">System architecture creates unique spectral signatures in oscillatory behavior.</p>
+                            <p class="card-text">System architecture creates unique spectral signatures in oscillatory
+                                behavior.</p>
                             <div class="figure">
-                                <img src="images/spectral_fingerprints.png" alt="Spectral Fingerprints" class="img-fluid">
+                                <img src="images/spectral_fingerprints.png" alt="Spectral Fingerprints"
+                                    class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -290,7 +317,8 @@
                             <h5 class="card-title mb-0">Self-Simplification</h5>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Systems undergo a phase transition-like simplification as depth increases.</p>
+                            <p class="card-text">Systems undergo a phase transition-like simplification as depth
+                                increases.</p>
                             <div class="figure">
                                 <img src="images/complexity_reduction.png" alt="Complexity Reduction" class="img-fluid">
                             </div>
@@ -308,9 +336,11 @@
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <p>
-                        Our model is based on a coupling function that relates the system's configuration (x), depth parameter (d), and a set of "orbital orders" (N_ord) that characterize the system's internal structure.
+                        Our model is based on a coupling function that relates the system's configuration (x), depth
+                        parameter (d), and a set of "orbital orders" (N_ord) that characterize the system's internal
+                        structure.
                     </p>
-                    
+
                     <div class="card mb-4">
                         <div class="card-header">
                             <h5 class="card-title mb-0">Core Definitions</h5>
@@ -336,7 +366,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="card mb-4">
                         <div class="card-header">
                             <h5 class="card-title mb-0">Time-Dependent Model</h5>
@@ -344,30 +374,31 @@
                         <div class="card-body">
                             <p>The time-dependent coupling function is defined as:</p>
                             <div class="equation">
-                                \[ h_n(x,d,t) = |\sin(n\theta(x))|^{d/n} \cdot |\cos(n\phi(x,d) + \omega_n(d)t)|^{1/n} \]
+                                \[ h_n(x,d,t) = |\sin(n\theta(x))|^{d/n} \cdot |\cos(n\phi(x,d) + \omega_n(d)t)|^{1/n}
+                                \]
                             </div>
                             <p>Where ω_n(d) = √d/n is the characteristic angular frequency for mode n at depth d.</p>
                         </div>
                     </div>
-                    
+
                     <div id="mermaid-diagram" class="mb-4">
                         <div class="mermaid">
                             graph TD
-                                A[System Configuration x] --> B[Primary Angle θ(x)]
-                                A --> C[Secondary Angle φ(x,d)]
-                                D[Depth Parameter d] --> C
-                                D --> E[Angular Frequency ω_n(d)]
-                                B --> F[Coupling Function h_n]
-                                C --> F
-                                E --> G[Time-Dependent Coupling h_n(x,d,t)]
-                                F --> H[Adaptability A]
-                                H --> I[Coherence C = 1-A]
-                                G --> J[Time-Dependent Adaptability A(x,d,t)]
-                                J --> K[Time-Dependent Coherence C(x,d,t)]
-                                H -.-> L[Conservation Law C+A=1]
-                                I -.-> L
-                                J -.-> M[Necessary Oscillations]
-                                K -.-> M
+                            A[System Configuration x] --> B[Primary Angle θ(x)]
+                            A --> C[Secondary Angle φ(x,d)]
+                            D[Depth Parameter d] --> C
+                            D --> E[Angular Frequency ω_n(d)]
+                            B --> F[Coupling Function h_n]
+                            C --> F
+                            E --> G[Time-Dependent Coupling h_n(x,d,t)]
+                            F --> H[Adaptability A]
+                            H --> I[Coherence C = 1-A]
+                            G --> J[Time-Dependent Adaptability A(x,d,t)]
+                            J --> K[Time-Dependent Coherence C(x,d,t)]
+                            H -.-> L[Conservation Law C+A=1]
+                            I -.-> L
+                            J -.-> M[Necessary Oscillations]
+                            K -.-> M
                         </div>
                     </div>
                 </div>
@@ -387,7 +418,9 @@
                         </div>
                         <div class="card-body">
                             <p class="card-text">
-                                Brain rhythms (alpha, theta, beta, gamma) could arise not just from specific neural circuitry but from a brain region attempting to optimize its processing under constraints of metabolic energy or information processing capacity.
+                                Brain rhythms (alpha, theta, beta, gamma) could arise not just from specific neural
+                                circuitry but from a brain region attempting to optimize its processing under
+                                constraints of metabolic energy or information processing capacity.
                             </p>
                         </div>
                     </div>
@@ -399,7 +432,9 @@
                         </div>
                         <div class="card-body">
                             <p class="card-text">
-                                Balances between specialist (C↑) and generalist (A↑) strategies, or periods of evolutionary stasis followed by adaptive radiation, might be analogous to our model's dynamics.
+                                Balances between specialist (C↑) and generalist (A↑) strategies, or periods of
+                                evolutionary stasis followed by adaptive radiation, might be analogous to our model's
+                                dynamics.
                             </p>
                         </div>
                     </div>
@@ -411,7 +446,8 @@
                         </div>
                         <div class="card-body">
                             <p class="card-text">
-                                The conservation of probability (|c₁|² + |c₂|² = 1) in a two-level quantum system is a direct analog of C+A=1. Rabi oscillations are a known consequence.
+                                The conservation of probability (|c₁|² + |c₂|² = 1) in a two-level quantum system is a
+                                direct analog of C+A=1. Rabi oscillations are a known consequence.
                             </p>
                         </div>
                     </div>
@@ -423,7 +459,10 @@
                         </div>
                         <div class="card-body">
                             <p class="card-text">
-                                If we interpret C as "certainty" or "degree of belief exploited" by a learning system, and A as "uncertainty" or "capacity for exploration," then C+A=1 could represent a fixed cognitive or informational resource. The "depth" parameter d could signify accumulated evidence or learning epochs.
+                                If we interpret C as "certainty" or "degree of belief exploited" by a learning system,
+                                and A as "uncertainty" or "capacity for exploration," then C+A=1 could represent a fixed
+                                cognitive or informational resource. The "depth" parameter d could signify accumulated
+                                evidence or learning epochs.
                             </p>
                         </div>
                     </div>
@@ -435,7 +474,9 @@
                         </div>
                         <div class="card-body">
                             <p class="card-text">
-                                Economic cycles might reflect necessary oscillations in the balance between exploitation of known resources (C) and exploration of new opportunities (A), under constraints of finite total resources.
+                                Economic cycles might reflect necessary oscillations in the balance between exploitation
+                                of known resources (C) and exploration of new opportunities (A), under constraints of
+                                finite total resources.
                             </p>
                         </div>
                     </div>
@@ -452,13 +493,17 @@
                 <div class="col-lg-8 mx-auto">
                     <ul class="nav nav-pills mb-4 justify-content-center" id="resources-tab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="code-tab" data-bs-toggle="pill" data-bs-target="#code" type="button" role="tab" aria-controls="code" aria-selected="true">Code</button>
+                            <button class="nav-link active" id="code-tab" data-bs-toggle="pill" data-bs-target="#code"
+                                type="button" role="tab" aria-controls="code" aria-selected="true">Code</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="paper-tab" data-bs-toggle="pill" data-bs-target="#paper" type="button" role="tab" aria-controls="paper" aria-selected="false">Paper</button>
+                            <button class="nav-link" id="paper-tab" data-bs-toggle="pill" data-bs-target="#paper"
+                                type="button" role="tab" aria-controls="paper" aria-selected="false">Paper</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="citation-tab" data-bs-toggle="pill" data-bs-target="#citation" type="button" role="tab" aria-controls="citation" aria-selected="false">Citation</button>
+                            <button class="nav-link" id="citation-tab" data-bs-toggle="pill" data-bs-target="#citation"
+                                type="button" role="tab" aria-controls="citation"
+                                aria-selected="false">Citation</button>
                         </li>
                     </ul>
                     <div class="tab-content" id="resources-tabContent">
@@ -469,10 +514,11 @@
                                 </div>
                                 <div class="card-body">
                                     <p>The complete codebase is available on GitHub:</p>
-                                    <a href="https://github.com/yourusername/oscillation-adaptability" class="btn btn-primary" target="_blank">
+                                    <a href="https://github.com/bbarclay/oscillation-adaptability"
+                                        class="btn btn-primary" target="_blank">
                                         <i class="fab fa-github"></i> View on GitHub
                                     </a>
-                                    
+
                                     <h6 class="mt-4">Example Usage:</h6>
                                     <pre class="bg-light p-3 rounded"><code>from code.model.adaptability_model import AdaptabilityModel
 
@@ -500,10 +546,23 @@ print(f"Conservation check (C+A): {adaptability + coherence:.16f}")</code></pre>
                                     <a href="https://arxiv.org" class="btn btn-primary" target="_blank">
                                         <i class="fas fa-file-pdf"></i> Read on arXiv
                                     </a>
-                                    
+
                                     <h6 class="mt-4">Abstract:</h6>
                                     <p class="bg-light p-3 rounded">
-                                        We present a theoretical framework and a paradigmatic mathematical model demonstrating that oscillatory behavior can be a necessary consequence of a system optimizing towards a state of order (or coherence) while adhering to a fundamental conservation law that links this order to its residual adaptability (or exploratory capacity). Within our model, we rigorously prove an exact conservation law between coherence (C) and adaptability (A), C+A=1, which is validated numerically with precision on the order of 10^-16. We demonstrate that as the system evolves towards maximal coherence under a depth parameter (d), its adaptability A decays exponentially according to A(x,d) ≤ (|N_ord*(x)|/|N_ord|) e^(-d M*(x)), with numerical validation confirming this relationship within 0.5% error. Crucially, when introducing explicit time-dependence representing intrinsic dynamics with characteristic frequencies ω_n(d) = √d/n, we prove that oscillations in A (and consequently in C) are mathematically necessary to maintain the conservation principle.
+                                        We present a theoretical framework and a paradigmatic mathematical model
+                                        demonstrating that oscillatory behavior can be a necessary consequence of a
+                                        system optimizing towards a state of order (or coherence) while adhering to a
+                                        fundamental conservation law that links this order to its residual adaptability
+                                        (or exploratory capacity). Within our model, we rigorously prove an exact
+                                        conservation law between coherence (C) and adaptability (A), C+A=1, which is
+                                        validated numerically with precision on the order of 10^-16. We demonstrate that
+                                        as the system evolves towards maximal coherence under a depth parameter (d), its
+                                        adaptability A decays exponentially according to A(x,d) ≤ (|N_ord*(x)|/|N_ord|)
+                                        e^(-d M*(x)), with numerical validation confirming this relationship within 0.5%
+                                        error. Crucially, when introducing explicit time-dependence representing
+                                        intrinsic dynamics with characteristic frequencies ω_n(d) = √d/n, we prove that
+                                        oscillations in A (and consequently in C) are mathematically necessary to
+                                        maintain the conservation principle.
                                     </p>
                                 </div>
                             </div>
@@ -515,7 +574,7 @@ print(f"Conservation check (C+A): {adaptability + coherence:.16f}")</code></pre>
                                 </div>
                                 <div class="card-body">
                                     <p>If you use this work in your research, please cite:</p>
-                                    
+
                                     <h6>BibTeX:</h6>
                                     <pre class="bg-light p-3 rounded"><code>@article{barclay2023necessary,
   title={Necessary Oscillations: Adaptability Dynamics Under Fundamental Conservation Constraints in Structured Systems},
@@ -523,10 +582,11 @@ print(f"Conservation check (C+A): {adaptability + coherence:.16f}")</code></pre>
   journal={arXiv preprint},
   year={2023}
 }</code></pre>
-                                    
+
                                     <h6 class="mt-3">APA:</h6>
                                     <p class="bg-light p-3 rounded">
-                                        Barclay, B. (2023). Necessary Oscillations: Adaptability Dynamics Under Fundamental Conservation Constraints in Structured Systems. arXiv preprint.
+                                        Barclay, B. (2023). Necessary Oscillations: Adaptability Dynamics Under
+                                        Fundamental Conservation Constraints in Structured Systems. arXiv preprint.
                                     </p>
                                 </div>
                             </div>
@@ -548,7 +608,8 @@ print(f"Conservation check (C+A): {adaptability + coherence:.16f}")</code></pre>
                 <div class="col-md-3">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="https://github.com/yourusername/oscillation-adaptability" class="text-white">GitHub Repository</a></li>
+                        <li><a href="https://github.com/yourusername/oscillation-adaptability" class="text-white">GitHub
+                                Repository</a></li>
                         <li><a href="https://arxiv.org" class="text-white">arXiv Paper</a></li>
                         <li><a href="#" class="text-white">Contact</a></li>
                     </ul>
@@ -572,7 +633,7 @@ print(f"Conservation check (C+A): {adaptability + coherence:.16f}")</code></pre>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+
     <!-- Initialize Mermaid -->
     <script>
         mermaid.initialize({
@@ -582,4 +643,5 @@ print(f"Conservation check (C+A): {adaptability + coherence:.16f}")</code></pre>
         });
     </script>
 </body>
+
 </html>

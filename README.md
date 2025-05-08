@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![DOI](https://img.shields.io/badge/DOI-Coming%20Soon-blue.svg)](https://doi.org)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Active-brightgreen)](https://yourusername.github.io/oscillation-adaptability/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Active-brightgreen)](https://bbarclay.github.io/oscillation-adaptability/)
 
 <p align="center">
   <img src="paper/figures/adaptability_landscapes_combined.png" alt="Adaptability Landscapes" width="800"/>
@@ -129,4 +129,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Brandon Barclay - barclaybrandon@hotmail.com
 
-Project Link: [https://github.com/yourusername/oscillation-adaptability](https://github.com/yourusername/oscillation-adaptability)
+Project Link: [https://github.com/bbarclay/oscillation-adaptability](https://github.com/bbarclay/oscillation-adaptability)
