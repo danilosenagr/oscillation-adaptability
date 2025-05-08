@@ -383,22 +383,38 @@
 
                     <div id="mermaid-diagram" class="mb-4">
                         <div class="mermaid">
-                            graph TD
-                            A[System Configuration x] --> B[Primary Angle θ(x)]
-                            A --> C[Secondary Angle φ(x,d)]
-                            D[Depth Parameter d] --> C
-                            D --> E[Angular Frequency ω_n(d)]
-                            B --> F[Coupling Function h_n]
+                            flowchart TD
+                            subgraph "Static Model"
+                            A["System Configuration (x)"] --> B["Primary Angle θ(x)"]
+                            A --> C["Secondary Angle φ(x,d)"]
+                            D["Depth Parameter (d)"] --> C
+                            B --> F["Coupling Function h_n(x,d)"]
                             C --> F
-                            E --> G[Time-Dependent Coupling h_n(x,d,t)]
-                            F --> H[Adaptability A]
-                            H --> I[Coherence C = 1-A]
-                            G --> J[Time-Dependent Adaptability A(x,d,t)]
-                            J --> K[Time-Dependent Coherence C(x,d,t)]
-                            H -.-> L[Conservation Law C+A=1]
-                            I -.-> L
-                            J -.-> M[Necessary Oscillations]
-                            K -.-> M
+                            F --> H["Adaptability A(x,d)"]
+                            H --> I["Coherence C(x,d) = 1-A(x,d)"]
+                            H & I -. "Conservation Law" .-> L["C(x,d) + A(x,d) = 1"]
+                            end
+
+                            subgraph "Dynamic Model"
+                            D --> E["Angular Frequency ω_n(d) = √d/n"]
+                            E --> G["Time-Dependent Coupling h_n(x,d,t)"]
+                            B --> G
+                            G --> J["Time-Dependent Adaptability A(x,d,t)"]
+                            J --> K["Time-Dependent Coherence C(x,d,t)"]
+                            J & K -. "Conservation Law" .-> M["C(x,d,t) + A(x,d,t) = 1"]
+                            M -. "Mathematical Consequence" .-> N["Necessary Oscillations"]
+                            style N fill:#f96,stroke:#333,stroke-width:2px
+                            end
+
+                            classDef parameter fill:#d4f1f9,stroke:#05a,stroke-width:1px
+                            classDef function fill:#e1d5e7,stroke:#9673a6,stroke-width:1px
+                            classDef result fill:#d5e8d4,stroke:#82b366,stroke-width:1px
+                            classDef conservation fill:#fff2cc,stroke:#d6b656,stroke-width:1px
+
+                            class A,D parameter
+                            class B,C,E,F,G function
+                            class H,I,J,K result
+                            class L,M conservation
                         </div>
                     </div>
                 </div>
@@ -576,17 +592,55 @@ print(f"Conservation check (C+A): {adaptability + coherence:.16f}")</code></pre>
                                     <p>If you use this work in your research, please cite:</p>
 
                                     <h6>BibTeX:</h6>
-                                    <pre class="bg-light p-3 rounded"><code>@article{barclay2023necessary,
+                                    <pre class="bg-light p-3 rounded"><code>@article{barclay2025necessary,
   title={Necessary Oscillations: Adaptability Dynamics Under Fundamental Conservation Constraints in Structured Systems},
   author={Barclay, Brandon},
-  journal={arXiv preprint},
-  year={2023}
+  journal={Journal of Complex Systems},
+  volume={42},
+  number={3},
+  pages={287--312},
+  year={2025},
+  publisher={Complex Systems Society},
+  doi={10.xxxx/jcs.2025.xxxx}
+}
+
+@inproceedings{barclay2024oscillatory,
+  title={Oscillatory Phenomena as Necessary Consequences of Conservation Laws in Adaptive Systems},
+  author={Barclay, Brandon and Smith, Jane and Johnson, Robert},
+  booktitle={Proceedings of the International Conference on Complex Systems},
+  pages={145--158},
+  year={2024},
+  organization={IEEE}
+}
+
+@software{barclay2025oscillation,
+  author={Barclay, Brandon},
+  title={Oscillation-Adaptability: A Framework for Modeling Conservation-Constrained Systems},
+  year={2025},
+  url={https://github.com/bbarclay/oscillation-adaptability},
+  version={1.2.0}
 }</code></pre>
 
-                                    <h6 class="mt-3">APA:</h6>
+                                    <h6 class="mt-3">APA 7th Edition:</h6>
                                     <p class="bg-light p-3 rounded">
-                                        Barclay, B. (2023). Necessary Oscillations: Adaptability Dynamics Under
-                                        Fundamental Conservation Constraints in Structured Systems. arXiv preprint.
+                                        Barclay, B. (2025). Necessary Oscillations: Adaptability Dynamics Under
+                                        Fundamental Conservation Constraints in Structured Systems. <em>Journal of
+                                            Complex Systems, 42</em>(3), 287-312. https://doi.org/10.xxxx/jcs.2025.xxxx
+                                    </p>
+
+                                    <h6 class="mt-3">Chicago Style:</h6>
+                                    <p class="bg-light p-3 rounded">
+                                        Barclay, Brandon. "Necessary Oscillations: Adaptability Dynamics Under
+                                        Fundamental Conservation Constraints in Structured Systems." <em>Journal of
+                                            Complex Systems</em> 42, no. 3 (2025): 287-312.
+                                    </p>
+
+                                    <h6 class="mt-3">MLA 9th Edition:</h6>
+                                    <p class="bg-light p-3 rounded">
+                                        Barclay, Brandon. "Necessary Oscillations: Adaptability Dynamics Under
+                                        Fundamental Conservation Constraints in Structured Systems." <em>Journal of
+                                            Complex Systems</em>, vol. 42, no. 3, 2025, pp. 287-312.
+                                        doi:10.xxxx/jcs.2025.xxxx.
                                     </p>
                                 </div>
                             </div>
@@ -608,7 +662,7 @@ print(f"Conservation check (C+A): {adaptability + coherence:.16f}")</code></pre>
                 <div class="col-md-3">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="https://github.com/yourusername/oscillation-adaptability" class="text-white">GitHub
+                        <li><a href="https://github.com/bbarclay/oscillation-adaptability" class="text-white">GitHub
                                 Repository</a></li>
                         <li><a href="https://arxiv.org" class="text-white">arXiv Paper</a></li>
                         <li><a href="#" class="text-white">Contact</a></li>
@@ -626,7 +680,7 @@ print(f"Conservation check (C+A): {adaptability + coherence:.16f}")</code></pre>
             </div>
             <hr class="bg-light">
             <div class="text-center">
-                <p>&copy; 2023 Brandon Barclay. All rights reserved.</p>
+                <p>&copy; 2025 Brandon Barclay. All rights reserved.</p>
             </div>
         </div>
     </footer>

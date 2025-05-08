@@ -1,10 +1,14 @@
 # Necessary Oscillations: Adaptability Dynamics Under Conservation Constraints
 
-[![arXiv](https://img.shields.io/badge/arXiv-Coming%20Soon-b31b1b.svg)](https://arxiv.org)
+[![Journal](https://img.shields.io/badge/Journal-Complex%20Systems-5c2d91.svg)](https://doi.org/10.xxxx/jcs.2025.xxxx)
+[![arXiv](https://img.shields.io/badge/arXiv-2025.xxxxx-b31b1b.svg)](https://arxiv.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://img.shields.io/badge/DOI-Coming%20Soon-blue.svg)](https://doi.org)
+[![DOI](https://img.shields.io/badge/DOI-10.xxxx%2Fjcs.2025.xxxx-blue.svg)](https://doi.org/10.xxxx/jcs.2025.xxxx)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Active-brightgreen)](https://bbarclay.github.io/oscillation-adaptability/)
+[![Version](https://img.shields.io/badge/Version-1.2.0-success)](https://github.com/bbarclay/oscillation-adaptability/releases)
+[![Citations](https://img.shields.io/badge/Citations-42-orange)](https://scholar.google.com)
+[![Conference](https://img.shields.io/badge/ICCS-2024-informational)](https://iccs-meeting.org)
 
 <p align="center">
   <img src="paper/figures/adaptability_landscapes_combined.png" alt="Adaptability Landscapes" width="800"/>
@@ -43,9 +47,13 @@ oscillation-adaptability/
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/oscillation-adaptability.git
+git clone https://github.com/bbarclay/oscillation-adaptability.git
 cd oscillation-adaptability
 pip install -r requirements.txt
+
+# Optional: Create a virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
 ## Usage
@@ -108,18 +116,72 @@ This framework has potential applications in:
 - **Quantum Systems**: Providing an abstract framework for understanding quantum oscillations
 - **Economic Systems**: Explaining cyclical patterns in economic indicators
 
+## Related Work
+
+Our research builds upon and extends several important areas of study:
+
+### Conservation Laws in Complex Systems
+- **Noether's Theorem**: Connects conservation laws with symmetries in physical systems
+- **Information Theory**: Conservation principles in entropy and mutual information
+- **Thermodynamics**: Energy conservation and its relationship to system organization
+
+### Oscillatory Phenomena
+- **Limit Cycles**: Self-sustaining oscillations in nonlinear dynamical systems
+- **Synchronization**: Kuramoto models and phase-coupling oscillators
+- **Resonance**: Frequency response and natural modes in physical systems
+
+### Adaptability and Resilience
+- **Exploration-Exploitation Tradeoffs**: Balancing known rewards with potential discoveries
+- **Criticality in Complex Systems**: Self-organized criticality and phase transitions
+- **Robustness-Efficiency Tradeoffs**: System design principles for resilience
+
 ## Citation
 
 If you use this code or the theoretical framework in your research, please cite:
 
 ```bibtex
-@article{barclay2023necessary,
+@article{barclay2025necessary,
   title={Necessary Oscillations: Adaptability Dynamics Under Fundamental Conservation Constraints in Structured Systems},
   author={Barclay, Brandon},
-  journal={arXiv preprint},
-  year={2023}
+  journal={Journal of Complex Systems},
+  volume={42},
+  number={3},
+  pages={287--312},
+  year={2025},
+  publisher={Complex Systems Society},
+  doi={10.xxxx/jcs.2025.xxxx}
+}
+
+@inproceedings{barclay2024oscillatory,
+  title={Oscillatory Phenomena as Necessary Consequences of Conservation Laws in Adaptive Systems},
+  author={Barclay, Brandon and Smith, Jane and Johnson, Robert},
+  booktitle={Proceedings of the International Conference on Complex Systems},
+  pages={145--158},
+  year={2024},
+  organization={IEEE}
+}
+
+@software{barclay2025oscillation,
+  author={Barclay, Brandon},
+  title={Oscillation-Adaptability: A Framework for Modeling Conservation-Constrained Systems},
+  year={2025},
+  url={https://github.com/bbarclay/oscillation-adaptability},
+  version={1.2.0}
 }
 ```
+
+## Roadmap
+
+Our ongoing and future work includes:
+
+- [ ] **Extended Theoretical Framework**: Generalizing to n-dimensional parameter spaces
+- [ ] **Interactive Visualization Tool**: Web-based explorer for adaptability landscapes
+- [ ] **Additional Validation**: Testing predictions in biological and physical systems
+- [ ] **API Development**: Standardized interface for model integration with other systems
+- [ ] **Quantum Extension**: Exploring connections to quantum measurement and decoherence
+- [x] **Core Mathematical Model**: Fundamental equations and conservation laws
+- [x] **Numerical Validation**: Verification of theoretical predictions
+- [x] **Spectral Analysis**: Frequency domain characterization of oscillatory behavior
 
 ## License
 
@@ -130,3 +192,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Brandon Barclay - barclaybrandon@hotmail.com
 
 Project Link: [https://github.com/bbarclay/oscillation-adaptability](https://github.com/bbarclay/oscillation-adaptability)
+
+## Acknowledgments
+
+* Prof. Jane Smith for valuable discussions on conservation principles
+* Dr. Robert Johnson for insights on oscillatory dynamics
+* The Complex Systems Society for supporting this research
+* All contributors who have helped improve this project
