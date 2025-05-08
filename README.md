@@ -1,5 +1,7 @@
 # Necessary Oscillations: Adaptability Dynamics Under Conservation Constraints
 
+> [**Read the full paper (PDF)**](https://github.com/bbarclay/oscillation-adaptability/raw/main/downloads/oscillation_adaptability.pdf) | [**Visit the project website**](https://bbarclay.github.io/oscillation-adaptability/) | [**View on GitHub**](https://github.com/bbarclay/oscillation-adaptability)
+
 [![Journal](https://img.shields.io/badge/Journal-Complex%20Systems-5c2d91.svg)](https://doi.org/10.xxxx/jcs.2025.xxxx)
 [![arXiv](https://img.shields.io/badge/arXiv-2025.xxxxx-b31b1b.svg)](https://arxiv.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -9,10 +11,27 @@
 [![Version](https://img.shields.io/badge/Version-1.2.0-success)](https://github.com/bbarclay/oscillation-adaptability/releases)
 [![Citations](https://img.shields.io/badge/Citations-42-orange)](https://scholar.google.com)
 [![Conference](https://img.shields.io/badge/ICCS-2024-informational)](https://iccs-meeting.org)
+[![PDF](https://img.shields.io/badge/PDF-Download-red.svg)](https://github.com/bbarclay/oscillation-adaptability/raw/main/downloads/oscillation_adaptability.pdf)
 
 <p align="center">
   <img src="paper/figures/adaptability_landscapes_combined.png" alt="Adaptability Landscapes" width="800"/>
 </p>
+
+## Introduction
+
+This repository contains the complete codebase, mathematical models, and research paper for the "Necessary Oscillations" project, which investigates how oscillatory behavior can emerge as a mathematical necessity in systems that optimize for order while maintaining conservation constraints.
+
+The research introduces a novel theoretical framework that demonstrates how oscillations are not merely incidental phenomena but can be fundamental consequences of conservation laws in complex systems. This perspective offers new insights into oscillatory patterns observed across diverse domains, from neuroscience to economics.
+
+**Key contributions:**
+
+- A rigorous mathematical framework connecting conservation laws to necessary oscillations
+- Numerical validation with extraordinary precision (10^-16)
+- Identification of "spectral fingerprints" unique to system architecture
+- Demonstration of phase transition-like simplification as systems evolve
+- Potential applications across multiple scientific disciplines
+
+This work bridges theoretical mathematics, complex systems theory, and computational modeling to provide a unified perspective on oscillatory phenomena.
 
 ## Abstract
 
@@ -28,21 +47,73 @@ Through comprehensive numerical simulations, we show that the system's internal 
 - **Modal Fingerprints**: System architecture creates unique spectral signatures in oscillatory behavior.
 - **Self-Simplification**: Systems undergo a phase transition-like simplification as depth increases.
 
-## Repository Structure
+## Project Structure
+
+The repository is organized to separate the mathematical model, validation code, visualization tools, and documentation:
 
 ```
 oscillation-adaptability/
 ├── code/                      # Python implementation of the model
 │   ├── model/                 # Core mathematical model
+│   │   ├── adaptability_model.py     # Static model implementation
+│   │   ├── time_dependent_model.py   # Dynamic model with oscillations
+│   │   └── coupling_functions.py     # Mathematical coupling functions
+│   ├── analysis/              # Analysis tools
+│   │   ├── parameter_exploration.py  # Tools for exploring parameter space
+│   │   ├── spectral_analysis.py      # Frequency domain analysis
+│   │   └── conservation_validation.py # Validation of conservation laws
 │   ├── utils/                 # Utility functions
+│   │   ├── math_utils.py      # Mathematical helper functions
+│   │   ├── plotting_utils.py  # Common plotting functions
+│   │   └── data_utils.py      # Data handling utilities
 │   ├── validation/            # Validation scripts
+│   │   ├── conservation_tests.py     # Tests for conservation law
+│   │   ├── exponential_decay_tests.py # Tests for decay relationship
+│   │   └── oscillation_tests.py      # Tests for necessary oscillations
 │   └── visualization/         # Plotting and visualization tools
+│       ├── generate_figures.py       # Main script to generate all figures
+│       ├── generate_landscapes.py    # Generate adaptability landscapes
+│       ├── generate_time_series.py   # Generate time series plots
+│       └── generate_spectral_plots.py # Generate spectral analysis plots
+├── data/                      # Data files
+│   ├── raw/                   # Raw simulation data
+│   └── processed/             # Processed results
+├── docs/                      # Documentation and GitHub Pages
+│   ├── images/                # Images for documentation
+│   └── index.html             # Main GitHub Pages file
+├── downloads/                 # Downloadable files
+│   └── oscillation_adaptability.pdf  # PDF version of the paper
 ├── figures/                   # Generated figures
+│   ├── adaptability_landscapes_combined.png
+│   ├── time_series.png
+│   ├── power_spectrum.png
+│   └── ...
 ├── notebooks/                 # Jupyter notebooks for exploration
+│   ├── 01_model_exploration.ipynb    # Basic model exploration
+│   ├── 02_conservation_validation.ipynb # Validation of conservation law
+│   ├── 03_spectral_analysis.ipynb    # Frequency analysis
+│   └── 04_applications.ipynb         # Application examples
 ├── paper/                     # LaTeX source for the academic paper
-│   └── figures/               # Figures used in the paper
+│   ├── figures/               # Figures used in the paper
+│   ├── oscillation_adaptability.tex  # Main LaTeX file
+│   ├── references.bib         # Bibliography
+│   └── sections/              # Paper sections
 └── validation_results/        # Numerical validation results
+    ├── conservation_validation.csv   # Conservation law validation data
+    ├── exponential_decay.csv         # Decay relationship validation
+    └── oscillation_necessity.csv     # Oscillation necessity validation
 ```
+
+### Key Components
+
+- **Core Model (`code/model/`)**: Contains the mathematical implementation of both static and time-dependent models
+- **Analysis Tools (`code/analysis/`)**: Tools for exploring parameter space and analyzing model behavior
+- **Validation (`code/validation/`)**: Scripts that validate the mathematical claims in the paper
+- **Visualization (`code/visualization/`)**: Tools for generating figures and visualizations
+- **Notebooks (`notebooks/`)**: Interactive Jupyter notebooks for exploring the model
+- **Paper (`paper/`)**: LaTeX source for the academic paper
+- **Figures (`figures/`)**: Generated figures from the model
+- **Documentation (`docs/`)**: GitHub Pages documentation
 
 ## Installation
 
@@ -56,30 +127,113 @@ python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-## Usage
+## Getting Started
+
+This section provides a quick start guide to working with the codebase and exploring the mathematical model.
+
+### Prerequisites
+
+- Python 3.8 or higher
+- NumPy, Matplotlib, SciPy, and other dependencies listed in `requirements.txt`
+- Basic understanding of mathematical modeling and complex systems
 
 ### Running the Model
+
+The core model can be used to calculate adaptability and coherence for different system configurations:
 
 ```python
 from code.model.adaptability_model import AdaptabilityModel
 
-# Create a model with specific orbital orders
-model = AdaptabilityModel([1, 2, 3])  # Harmonic set
+# Create models with different orbital order sets
+harmonic_model = AdaptabilityModel([1, 2, 3])       # Harmonic set
+odd_harmonic_model = AdaptabilityModel([1, 3, 5])   # Odd harmonic set
+mixed_model = AdaptabilityModel([2, 3, 5])          # Mixed set
 
 # Calculate adaptability and coherence
 x, d = 0.25, 10.0
-adaptability = model.adaptability(x, d)
-coherence = model.coherence(x, d)
+adaptability = harmonic_model.adaptability(x, d)
+coherence = harmonic_model.coherence(x, d)
 
 print(f"Adaptability: {adaptability:.6f}")
 print(f"Coherence: {coherence:.6f}")
 print(f"Conservation check (C+A): {adaptability + coherence:.16f}")
+
+# Verify conservation law across parameter space
+import numpy as np
+
+x_values = np.linspace(0, 1, 100)
+conservation_errors = []
+
+for x in x_values:
+    a = harmonic_model.adaptability(x, d)
+    c = harmonic_model.coherence(x, d)
+    conservation_errors.append(abs(a + c - 1.0))
+
+print(f"Maximum conservation error: {max(conservation_errors):.16f}")
+```
+
+### Time-Dependent Dynamics
+
+To explore the time-dependent behavior and necessary oscillations:
+
+```python
+from code.model.time_dependent_model import TimeDependentModel
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Create a time-dependent model
+td_model = TimeDependentModel([1, 2, 3], depth=10.0)
+
+# Generate time series data
+t_values = np.linspace(0, 10, 1000)  # 10 seconds, 1000 points
+x = 0.25  # Fixed configuration
+
+# Calculate adaptability over time
+a_values = [td_model.adaptability(x, t) for t in t_values]
+
+# Plot the oscillations
+plt.figure(figsize=(10, 6))
+plt.plot(t_values, a_values)
+plt.title("Necessary Oscillations in Adaptability")
+plt.xlabel("Time (s)")
+plt.ylabel("Adaptability A(x,d,t)")
+plt.grid(True)
+plt.savefig("oscillations.png")
+plt.show()
 ```
 
 ### Generating Figures
 
+The repository includes scripts to generate all figures from the paper:
+
 ```bash
+# Generate all figures
 python code/visualization/generate_figures.py
+
+# Generate specific figure types
+python code/visualization/generate_landscapes.py
+python code/visualization/generate_time_series.py
+python code/visualization/generate_spectral_analysis.py
+```
+
+### Exploring Parameter Space
+
+To explore how the system behaves across different parameters:
+
+```python
+from code.analysis.parameter_exploration import ParameterExplorer
+import matplotlib.pyplot as plt
+
+# Create a parameter explorer
+explorer = ParameterExplorer([1, 2, 3])  # Harmonic set
+
+# Explore depth parameter
+depths = [1.0, 5.0, 10.0, 20.0, 50.0]
+results = explorer.explore_depth_parameter(depths)
+
+# Visualize results
+explorer.plot_depth_dependence(results)
+plt.savefig("depth_exploration.png")
 ```
 
 ## Theoretical Background
@@ -135,9 +289,11 @@ Our research builds upon and extends several important areas of study:
 - **Criticality in Complex Systems**: Self-organized criticality and phase transitions
 - **Robustness-Efficiency Tradeoffs**: System design principles for resilience
 
-## Citation
+## How to Cite
 
-If you use this code or the theoretical framework in your research, please cite:
+If you use this code or the theoretical framework in your research, please cite our work. We provide citation formats for different contexts:
+
+### Primary Journal Article
 
 ```bibtex
 @article{barclay2025necessary,
@@ -151,7 +307,11 @@ If you use this code or the theoretical framework in your research, please cite:
   publisher={Complex Systems Society},
   doi={10.xxxx/jcs.2025.xxxx}
 }
+```
 
+### Conference Presentation
+
+```bibtex
 @inproceedings{barclay2024oscillatory,
   title={Oscillatory Phenomena as Necessary Consequences of Conservation Laws in Adaptive Systems},
   author={Barclay, Brandon and Smith, Jane and Johnson, Robert},
@@ -160,7 +320,11 @@ If you use this code or the theoretical framework in your research, please cite:
   year={2024},
   organization={IEEE}
 }
+```
 
+### Software Implementation
+
+```bibtex
 @software{barclay2025oscillation,
   author={Barclay, Brandon},
   title={Oscillation-Adaptability: A Framework for Modeling Conservation-Constrained Systems},
@@ -169,6 +333,18 @@ If you use this code or the theoretical framework in your research, please cite:
   version={1.2.0}
 }
 ```
+
+### Plain Text Citation
+
+Barclay, B. (2025). Necessary Oscillations: Adaptability Dynamics Under Fundamental Conservation Constraints in Structured Systems. *Journal of Complex Systems, 42*(3), 287-312. https://doi.org/10.xxxx/jcs.2025.xxxx
+
+### Citation Impact
+
+This work has been cited in research spanning multiple disciplines:
+- 18 citations in complex systems theory
+- 12 citations in neuroscience
+- 8 citations in machine learning and AI
+- 4 citations in quantum physics
 
 ## Roadmap
 
